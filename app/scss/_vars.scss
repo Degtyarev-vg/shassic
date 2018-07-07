@@ -1,9 +1,17 @@
-$RobotoRegular: "RobotoRegular", "Helvetica", "Tahoma", sans-serif;
-$RobotoBold: "RobotoBold", "Helvetica", "Tahoma", sans-serif;
+$magistralcbold: "magistralcbold", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedbold: "proxima_nova_condensedbold", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedBdIt: "proxima_nova_condensedBdIt", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedXBd: "proxima_nova_condensedXBd", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedlight: "proxima_nova_condensedlight", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedregular: "proxima_nova_condensedregular", "Helvetica", "Tahoma", sans-serif;
+$proxima_nova_condensedSBd: "proxima_nova_condensedSBd", "Helvetica", "Tahoma", sans-serif;
+$proxima_novalight: "proxima_novalight", "Helvetica", "Tahoma", sans-serif;
+$robotolight: "robotolight", "Helvetica", "Tahoma", sans-serif;
+$robotoregular: "robotoregular", "Helvetica", "Tahoma", sans-serif;
 
-$default-font: $RobotoRegular;
+$default-font: $proxima_nova_condensedlight;
 
 $transition: all ease .3s;
 
-$mainColor: #fff;
-$accentColor: #000;
+$mainColor: #013c76;
+$accentColor: #ffa422;

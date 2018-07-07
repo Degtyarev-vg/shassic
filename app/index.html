@@ -15,11 +15,77 @@
     <!-- build:remove-->
     <link href="css/header.min.css" rel="stylesheet">
     <!-- endbuild-->
-    <title>There is title</title>
+    <title>ШАССИК - разборка иномарок</title>
     <meta name="description" content="">
     <meta name="keywords" content=""> </head>
   <body class="page">
-    <header class="header page__header"> </header>
+    <header class="header header_index">
+      <div class="header__top">
+        <div class="grid">
+          <div class="header__top-container">
+            <div class="logo header__logo">
+              <img src="img/logo.svg" alt="Шассик" /> </div>
+            <a class="basket basket_added header__basket" href="#">
+              <!-- Для корзины добавляется класс-модификатор basket_added для того, чтобы изменить цвет количества товаров и показать сумму. При удалении данного модификатора надпись с суммой скрывается, а также меняется цвет количества-->
+              <span class="basket__quantity">3</span>
+              <span class="basket__name">Корзина</span>
+              <span class="basket__amount">Сумма:
+                <span>2 350 руб.</span>
+              </span>
+            </a>
+            <div class="top-contacts header__top-contacts">
+              <div>
+                <div class="top-contacts__item top-contacts__item_address">Санкт-Петербург, шоссе Революции, д.68 </div>
+                <br/>
+                <div class="top-contacts__item top-contacts__item_time">с 10:00 до 19:00 </div>
+              </div>
+              <div>
+                <a class="top-contacts__item top-contacts__item_phone" href="tel:89522636699">8 (952) 263 66 99</a>
+                <br/>
+                <a class="top-contacts__item top-contacts__item_email" href="mailto:info@shassik.ru">info@shassik.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="header__navigation">
+          <nav class="top-menu header__top-menu">
+            <div class="hamburger hamburger_top-menu">
+              <button class="hamburger hamburger_top-menu">
+                <span class="hamburger__btn"></span>
+              </button>
+            </div>
+            <ul>
+              <li>
+                <a href="#">Каталог автозапчастей</a>
+              </li>
+              <li>
+                <a href="#">Доставка и возврат</a>
+              </li>
+              <li class="active">
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <form class="search header__search" action="#" method="post" autocomplete="off">
+            <div class="search__container">
+              <input type="text" maxlength="100" />
+              <button type="submit"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="header__banner">
+          <h1>Красивое УТП,
+            <br/>почему нужно тут заказать запчасти</h1>
+        </div>
+      </div>
+    </header>
     <div class="content page__content"> </div>
     <footer class="footer page__footer"> </footer>
     <link href="css/style.min.css" rel="stylesheet" />

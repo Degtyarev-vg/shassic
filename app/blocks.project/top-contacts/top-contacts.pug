@@ -1,0 +1,10 @@
+mixin top-contacts()
+  +b.top-contacts&attributes(attributes)
+    div
+      +e.item._address !{contacts.address}
+      br
+      +e.item._time !{contacts.time}
+    div
+      +e('a')(href='tel:89522636699').item._phone !{contacts.phone}
+      br
+      +e('a')(href='mailto:' + contacts.email).item._email !{contacts.email}

@@ -79,7 +79,7 @@ gulp.task('scss', function () {
     .pipe(sass())
     .pipe(autoprefixer(['last 15 versions', '> 1%']))
     .pipe(gcmq())
-    .pipe(csso())
+    //.pipe(csso())
     .pipe(rename({suffix: '.min', prefix : ''}))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(cached('scss'))
@@ -91,7 +91,7 @@ gulp.task('libs:js', function() {
   return gulp.src(['app/libs/include-libs.js'])
     .pipe( include() )
     .pipe(rename('libs.min.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe( gulp.dest('app/js') )
 });
 
@@ -105,7 +105,7 @@ gulp.task('blocks:js', function() {
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream: true}));
 });

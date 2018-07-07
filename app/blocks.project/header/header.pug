@@ -1,0 +1,13 @@
+mixin header(isMain)
+  +b('header').header&attributes(attributes)
+    +e.top
+      .grid
+        +e.top-container
+          +logo(isMain).__logo
+          +basket._added.__basket
+          +top-contacts.__top-contacts
+    .grid
+      +e.navigation
+        +top-menu.__top-menu
+        +search.__search
+    block

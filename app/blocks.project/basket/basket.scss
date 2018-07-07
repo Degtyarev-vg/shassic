@@ -1,0 +1,83 @@
+// Для импорта в файл подключения: @import './app/blocks.project/basket/basket';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.basket {
+  display: inline-block;
+  font-family: $robotoregular;
+  font-size: 0;
+  line-height: 1;
+  color: #fff;
+  transition: $transition;
+  text-decoration: none;
+  &:hover {
+    color: $accentColor;
+  }
+
+  &_added {
+    .basket__quantity {
+      color: $accentColor;
+    }
+    .basket__amount {
+      display: block;
+    }
+  }
+
+  &__quantity {
+    background-color: #252525;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    height: 21px;
+    width: 21px;
+    @media (max-width: 480px) {
+      font-size: 10px;
+      line-height: 18px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 33px 0 11px;
+    position: relative;
+    width: calc(100% - 21px);
+    @media (max-width: 480px) {
+      font-size: 12px;
+      padding: 0 25px 0 5px;
+      width: calc(100% - 18px);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 20px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2220%22%20width%3D%2222%22%3E%3Cpath%20d%3D%22M.816%201.63h2.33l3.322%2012.038a.83.829%200%200%200%20.79.6h10.214a.821.821%200%200%200%20.75-.489l3.712-8.56a.82.819%200%200%200-.07-.773.8.8%200%200%200-.68-.367H9.899a.815.815%200%200%200%200%201.63h10.044l-3.01%206.928H7.868L4.547.6a.82.819%200%200%200-.79-.6H.816a.816.815%200%200%200%200%201.63zM6.488%2020a1.849%201.848%200%201%200-1.85-1.848A1.844%201.843%200%200%200%206.487%2020zm11.524%200h.14a1.847%201.846%200%200%200%201.261-.639%201.9%201.9%200%200%200%20.45-1.345A1.846%201.845%200%201%200%2018.013%2020z%22%20data-name%3D%22icon_korzina%20(svg)%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+      @media (max-width: 480px) {
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+
+  &__amount {
+    display: none;
+    font-family: $robotolight;
+    font-size: 14px;
+    margin-top: 13px;
+    @media (max-width: 480px) {
+      font-size: 12px;
+      margin-top: 7px;
+    }
+  }
+}

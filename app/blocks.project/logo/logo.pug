@@ -1,0 +1,7 @@
+mixin logo(isMain)
+  if isMain
+    +b.logo&attributes(attributes)
+      img(src='img/logo.svg' alt='Шассик')
+  else
+    +b('a')(href='/').logo&attributes(attributes)
+      img(src='img/logo.svg' alt='Шассик')

@@ -1,0 +1,149 @@
+// Для импорта в файл подключения: @import './app/blocks.project/header/header';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.header {
+
+  &_index {
+    background: url('../img/banner.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  &__top {
+    background-color: rgba($mainColor, .9);
+    font-size: 0;
+    padding: 20px 0;
+    @media (max-width: 992px) {
+      padding: 10px 0;
+    }
+  }
+
+  &__top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 1;
+    margin-left: 17px;
+    min-width: 333px;
+    max-width: 333px;
+    @media (max-width: 1310px) {
+      margin-left: 0;
+      min-width: 170px;
+      max-width: 170px;
+    }
+    @media (max-width: 480px) {
+      min-width: 120px;
+      max-width: 120px;
+    }
+  }
+
+  &__basket {
+    flex-shrink: 1;
+    min-width: 124px;
+    order: 1;
+    @media (max-width: 992px) {
+      order: initial;
+      margin-left: auto;
+    }
+    @media (max-width: 480px) {
+      min-width: 100px;
+    }
+  }
+
+  &__top-contacts {
+    flex-shrink: 1;
+    padding: 0 64px 0 15px;
+    @media (max-width: 1310px) {
+      padding: 0 30px;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      padding: 0;
+      margin-top: 15px;
+      justify-content: center;
+    }
+  }
+
+  &__navigation {
+    background-color: $accentColor;
+    display: flex;
+    position: relative;
+    @media (max-width: 992px) {
+      padding: 5px 0;
+      align-items: center;
+    }
+  }
+
+  &__top-menu {
+    flex-shrink: 1;
+    width: calc(100% - 415px);
+    @media (max-width: 1310px) {
+      width: calc(100% - 250px);
+    }
+    @media (max-width: 992px) {
+      padding: 5px 0 0 10px;
+      width: 300px;
+    }
+    @media (max-width: 768px) {
+      width: 70px;
+    }
+  }
+
+  &__search {
+    flex-shrink: 1;
+    width: 415px;
+    @media (max-width: 1310px) {
+      width: 250px;
+    }
+    @media (max-width: 992px) {
+      width: calc(100% - 300px);
+    }
+    @media (max-width: 768px) {
+      width: calc(100% - 70px);
+    }
+  }
+
+  &__banner {
+    text-align: center;
+    padding: 104px 0 136px;
+    @media (max-width: 992px) {
+      padding: 50px 0;
+    }
+    h1 {
+      font-family: $proxima_nova_condensedBdIt;
+      font-size: 48px;
+      line-height: 60px;
+      font-weight: normal;
+      color: #013c76;
+      padding-bottom: 20px;
+      position: relative;
+      @media (max-width: 992px) {
+        font-size: 40px;
+        line-height: 1.2;
+      }
+      @media (max-width: 480px) {
+        font-size: 32px;
+      }
+      &:before {
+        content: '';
+        background-color: #fe9b00;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6px;
+        width: 93px;
+      }
+    }
+  }
+
+}

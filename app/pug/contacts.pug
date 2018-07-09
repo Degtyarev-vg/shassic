@@ -1,0 +1,21 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Контакты | ШАССИК - разборка иномарок';
+
+  +page
+
+    +header(false)._index.__header
+      .grid
+        +e.banner
+          h1 Красивое УТП,<br/>почему нужно тут заказать запчасти
+
+    +b.content.__content
+
+      .grid
+        //-
+
+    +footer(false).__footer

@@ -1,0 +1,153 @@
+// Для импорта в файл подключения: @import './app/blocks.project/catalog/catalog';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.catalog {
+  background-color: #fff;
+  margin-top: -30px;
+  text-align: center;
+  padding: 22px 0;
+  @media (max-width: 992px) {
+    margin-top: 0;
+  }
+
+  .step {
+    margin-top: 7px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    transition: $transition;
+    margin: 57px -15px 0;
+    @media (max-width: 992px) {
+      margin-top: 30px;
+    }
+    @media (max-width: 767px) {
+      max-height: 350px;
+      overflow: hidden;
+      position: relative;
+      &:before {
+        content: '';
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7));
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 90px;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .catalog-open {
+    max-height: 100%;
+    &:before {
+      display: none;
+    }
+  }
+
+  li {
+    flex-shrink: 1;
+    border-right: 1px solid #cccccc;
+    padding: 0 15px;
+    min-height: 52px;
+    width: 16.6666666%;
+    @media (max-width: 1310px) {
+      width: 25%;
+    }
+    @media (max-width: 992px) {
+      width: 33.3333333%;
+    }
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+    @media (max-width: 479px) {
+      border-right: 0;
+      width: 100%;
+    }
+    &:nth-of-type(6n + 6) {
+      border-right: 0;
+      @media (max-width: 1310px) {
+        border-right: 1px solid #cccccc;
+      }
+    }
+    &:nth-of-type(4n + 4) {
+      @media (max-width: 1310px) {
+        border-right: 0;
+      }
+      @media (max-width: 992px) {
+        border-right: 1px solid #cccccc;
+      }
+    }
+    &:nth-of-type(3n + 3) {
+      @media (max-width: 992px) {
+        border-right: 0;
+      }
+      @media (max-width: 767px) {
+        border-right: 1px solid #cccccc;
+      }
+    }
+    &:nth-of-type(even) {
+      @media (max-width: 767px) {
+        border-right: 0;
+      }
+    }
+
+    a {
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      font-family: $proxima_nova_condensedSBd;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #0054a6;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      transition: $transition;
+      text-transform: uppercase;
+      &:hover {
+        border: 1px solid #0054a6;
+        p {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      flex-shrink: 1;
+      padding: 5px 8px;
+      span {
+        font-family: $proxima_nova_condensedlight;
+      }
+    }
+  }
+
+  &__img-container {
+    flex-shrink: 1;
+    position: relative;
+    height: 100%;
+    width: 60px;
+    img {
+      max-height: 45px;
+      max-width: 55px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__btn-more {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+}

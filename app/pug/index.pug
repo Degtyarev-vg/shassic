@@ -8,13 +8,16 @@ html(lang='ru')
 
   +page
 
-    +header(true)._index
+    +header(true)._index.__header
       .grid
         +e.banner
           h1 Красивое УТП,<br/>почему нужно тут заказать запчасти
 
     +b.content.__content
-      //- Other content
 
-    +b('footer').footer.__footer
-      //- Content for footer
+      .grid
+        +catalog
+
+      +section-text
+
+    +footer(true).__footer

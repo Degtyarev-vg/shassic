@@ -1,10 +1,10 @@
 mixin top-contacts()
   +b.top-contacts&attributes(attributes)
     div
-      +e.item._address !{contacts.address}
+      +b.contacts-item._address.__item._address <span></span>!{contacts.address}
       br
-      +e.item._time !{contacts.time}
+      +b.contacts-item._time.__item._time <span></span>!{contacts.time}
     div
-      +e('a')(href='tel:89522636699').item._phone !{contacts.phone}
+      +b('a')(href='tel:89522636699').contacts-item._phone.__item._phone <span></span>!{contacts.phone}
       br
-      +e('a')(href='mailto:' + contacts.email).item._email !{contacts.email}
+      +b('a')(href='mailto:' + contacts.email).contacts-item._email.__item._email <span></span>!{contacts.email}

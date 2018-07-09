@@ -34,18 +34,10 @@
   }
 
   &__item {
-    position: relative;
-    padding-left: 31px;
-    display: inline-block;
     @media (max-width: 480px) {
       padding-left: 0;
     }
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+    span {
       @media (max-width: 480px) {
         display: none;
       }
@@ -56,34 +48,20 @@
       @media (max-width: 480px) {
         margin-bottom: 5px;
       }
-      &:before {
-        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2217%22%20width%3D%2212%22%3E%3Cpath%20d%3D%22M6%200C2.686%200%200%202.558%200%205.714%200%208.437%201.56%2010.528%205.839%2016.9c.089.133.233.133.322%200C10.44%2010.528%2012%208.437%2012%205.714%2012%202.558%209.314%200%206%200zm0%208.928c-1.864%200-3.375-1.44-3.375-3.214C2.625%203.939%204.136%202.5%206%202.5s3.375%201.439%203.375%203.214c0%201.774-1.511%203.214-3.375%203.214z%22%20fill%3D%22%23ffa422%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
-        background-size: contain;
-        height: 14px;
-        width: 12px;
-      }
-    }
-    &_time {
-      &:before {
-        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2216%22%20data-name%3D%22Layer%201%22%3E%3Cpath%20d%3D%22M8%200a8%208%200%201%200%208%208%208.009%208.009%200%200%200-8-8zm0%2014.933A6.933%206.933%200%201%201%2014.933%208%206.933%206.933%200%200%201%208%2014.933z%22%20fill%3D%22%23ffa422%22%2F%3E%3Cpath%20d%3D%22M8.533%203.2a.533.533%200%200%200-1.066%200V8A.533.533%200%200%200%208%208.533h4.978a.533.533%200%200%200%200-1.066H8.533z%22%20fill%3D%22%23ffa422%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
-        background-size: contain;
-        height: 16px;
-        width: 16px;
-      }
     }
     &_phone, &_email {
-      text-decoration: none;
-      transition: $transition;
       color: #fff;
-      &:hover {
-        color: $accentColor;
-      }
     }
     &_phone {
       font-family: $proxima_nova_condensedSBd;
       font-size: 30px;
       margin-bottom: 7px;
-      white-space: nowrap;
+      span {
+        &:before {
+          height: 20px;
+          width: 20px;
+        }
+      }
       @media (max-width: 1310px) {
         font-size: 24px;
       }
@@ -91,23 +69,11 @@
         font-size: 14px;
         margin-bottom: 5px;
       }
-      &:before {
-        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2220%22%20width%3D%2220%22%3E%3Cpath%20d%3D%22M.762%206.53a32.393%2032.393%200%200%200%2012.517%2012.573l.251.138a5.933%205.933%200%200%200%204.546.528l.342-.092a1.91%201.91%200%200%200%201.28-1.262l.296-2.639a.957.957%200%200%200-.57-.986l-2.925-1.262a1.658%201.658%200%200%200-2.055.62l-.731%201.124a.764.764%200%200%201-1.028.252%2020.602%2020.602%200%200%201-8.269-8.467.79.79%200%200%201%20.229-1.01l.936-.665a1.664%201.664%200%200%200%20.571-2.11L4.85.54A.934.934%200%200%200%203.845.013L1.47.403A1.861%201.861%200%200%200%20.373%201.505%206.05%206.05%200%200%200%20.762%206.53z%22%20fill%3D%22%23ffa422%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
-        background-size: contain;
-        height: 20px;
-        width: 20px;
-      }
     }
     &_email {
       font-size: 16px;
       @media (max-width: 480px) {
         font-size: 14px;
-      }
-      &:before {
-        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2211%22%20width%3D%2215%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1.406%200C.63%200%200%20.642%200%201.435v8.13C0%2010.358.63%2011%201.406%2011h12.188C14.37%2011%2015%2010.358%2015%209.565v-8.13C15%20.642%2014.37%200%2013.594%200zM.938%202.236v7.33c0%20.263.21.477.468.477h12.188a.474.474%200%200%200%20.469-.478V2.236l-5.8%204.138a1.383%201.383%200%200%201-1.527%200zM13.412.956H1.587c-.467%200-.647.143-.254.402l5.912%204.213a.46.46%200%200%200%20.51%200l5.912-4.213c.393-.259.213-.401-.254-.401z%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23ffa422%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
-        background-size: contain;
-        height: 11px;
-        width: 15px;
       }
     }
   }

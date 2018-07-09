@@ -1,0 +1,18 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-text/section-text';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-text {
+  text-align: center;
+  padding: 25px 0;
+
+  p {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #303030;
+    text-align: left;
+    margin-top: 20px;
+  }
+}

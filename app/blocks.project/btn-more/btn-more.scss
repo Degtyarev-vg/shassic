@@ -1,0 +1,21 @@
+// Для импорта в файл подключения: @import './app/blocks.project/btn-more/btn-more';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.btn-more {
+  border: 1px solid #cccccc;
+  font-family: $proxima_nova_condensedbold;
+  font-size: 16px;
+  line-height: 1;
+  color: #cccccc;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $transition;
+  padding: 16px 10px;
+  &:hover {
+    border: 1px solid $accentColor;
+    color: $accentColor;
+  }
+}

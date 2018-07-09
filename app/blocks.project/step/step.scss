@@ -1,0 +1,21 @@
+// Для импорта в файл подключения: @import './app/blocks.project/step/step';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.step {
+  background-color: #b6e7fa;
+  display: inline-block;
+  font-family: $proxima_nova_condensedbold;
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 7px 12px;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}

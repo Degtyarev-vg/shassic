@@ -1,0 +1,16 @@
+mixin footer-contacts()
+  +b.footer-contacts&attributes(attributes)
+    +e.left
+      +b('a')(href='tel:89522636699').contacts-item._phone.__phone <span></span>!{contacts.phone}
+      br
+      +b.contacts-item._address.__address <span></span>!{contacts.address}
+      br
+      +b.contacts-item._time.__time <span></span>!{contacts.time}
+      br
+      +b('a')(href='mailto:' + contacts.email).contacts-item._email.__email <span></span>!{contacts.email}
+    +e.right
+      +b('a')(href='https://vk.com' target='_blank').social-item._vk.__social-item Группа в контакте
+      br
+      +b('a')(href='viber://chat?number=79522636699').social-item._viber.__social-item Viber
+      br
+      +b('a')(href='https://api.whatsapp.com/send?phone=79522636699').social-item._whatsapp.__social-item WhatsApp

@@ -1,0 +1,17 @@
+mixin footer(isMain)
+  +b('footer').footer&attributes(attributes)
+    .grid
+      +e.content
+        +e.container-logo
+          +logo(isMain).__logo
+          +e('p').copyright &copy; 2009-2018 Авторазборка Шассик
+        +e.container-menu
+          nav
+            ul
+              - let i = 0;
+              each item in topMenu
+                li(class='' + ((i == 2) ? 'active' : ''))
+                  a(href=item.link) !{item.text}
+                - i++;
+        +e.container-contacts
+          +footer-contacts

@@ -1,4 +1,236 @@
 {
+	"catalog": {
+		"item1": {
+			"img": "img/catalog/icon_acura.svg",
+			"model": "Acura",
+			"quantity": "15"
+		},
+		"item2": {
+			"img": "img/catalog/icon_citroen.svg",
+			"model": "citroen",
+			"quantity": "30"
+		},
+		"item3": {
+			"img": "img/catalog/icon_infiniti.svg",
+			"model": "infiniti",
+			"quantity": "24"
+		},
+		"item4": {
+			"img": "img/catalog/icon_lifan.svg",
+			"model": "lifan",
+			"quantity": "24"
+		},
+		"item5": {
+			"img": "img/catalog/icon_opel.svg",
+			"model": "opel",
+			"quantity": "16"
+		},
+		"item6": {
+			"img": "img/catalog/icon_subaru.svg",
+			"model": "subaru",
+			"quantity": "24"
+		},
+		"item7": {
+			"img": "img/catalog/icon_audi.svg",
+			"model": "audi",
+			"quantity": "24"
+		},
+		"item8": {
+			"img": "img/catalog/icon_daewoo.svg",
+			"model": "daewoo",
+			"quantity": "37"
+		},
+		"item9": {
+			"img": "img/catalog/icon_iran-khadro_1.svg",
+			"model": "iran khadro",
+			"quantity": "29"
+		},
+		"item10": {
+			"img": "img/catalog/icon_linkoln.svg",
+			"model": "linkoln",
+			"quantity": "7"
+		},
+		"item11": {
+			"img": "img/catalog/icon_peugeot.svg",
+			"model": "peugeot",
+			"quantity": "24"
+		},
+		"item12": {
+			"img": "img/catalog/icon_suzuki.svg",
+			"model": "suzuki",
+			"quantity": "37"
+		},
+		"item13": {
+			"img": "img/catalog/icon_bentley.svg",
+			"model": "bentley",
+			"quantity": "2"
+		},
+		"item14": {
+			"img": "img/catalog/icon_fiat.svg",
+			"model": "fiat",
+			"quantity": "24"
+		},
+		"item15": {
+			"img": "img/catalog/icon_iveco.svg",
+			"model": "iveco",
+			"quantity": "32"
+		},
+		"item16": {
+			"img": "img/catalog/icon_man.svg",
+			"model": "man",
+			"quantity": "9"
+		},
+		"item17": {
+			"img": "img/catalog/icon_porshe.svg",
+			"model": "porshe",
+			"quantity": "2"
+		},
+		"item18": {
+			"img": "img/catalog/icon_toyota.svg",
+			"model": "toyota",
+			"quantity": "55"
+		},
+		"item19": {
+			"img": "img/catalog/icon_BMW.svg",
+			"model": "BMW",
+			"quantity": "37"
+		},
+		"item20": {
+			"img": "img/catalog/icon_ford.svg",
+			"model": "ford",
+			"quantity": "67"
+		},
+		"item21": {
+			"img": "img/catalog/icon_jeep.svg",
+			"model": "jeep",
+			"quantity": "20"
+		},
+		"item22": {
+			"img": "img/catalog/icon_mazda.svg",
+			"model": "mazda",
+			"quantity": "24"
+		},
+		"item23": {
+			"img": "img/catalog/icon_renault.svg",
+			"model": "renault",
+			"quantity": "12"
+		},
+		"item24": {
+			"img": "img/catalog/icon_volvo.svg",
+			"model": "volvo",
+			"quantity": "16"
+		},
+		"item25": {
+			"img": "img/catalog/icon_cadilac.svg",
+			"model": "cadilac",
+			"quantity": "12"
+		},
+		"item26": {
+			"img": "img/catalog/icon_great_wall.svg",
+			"model": "great wall",
+			"quantity": "19"
+		},
+		"item27": {
+			"img": "img/catalog/icon_kia.svg",
+			"model": "kia",
+			"quantity": "39"
+		},
+		"item28": {
+			"img": "img/catalog/icon_mercedes.svg",
+			"model": "mercedes benz",
+			"quantity": "28"
+		},
+		"item29": {
+			"img": "img/catalog/icon_saab.svg",
+			"model": "saab",
+			"quantity": "30"
+		},
+		"item30": {
+			"img": "img/catalog/icon_vortex.svg",
+			"model": "vortex",
+			"quantity": "27"
+		},
+		"item31": {
+			"img": "img/catalog/icon_Chery.svg",
+			"model": "Chery",
+			"quantity": "10"
+		},
+		"item32": {
+			"img": "img/catalog/icon_honda.svg",
+			"model": "honda",
+			"quantity": "52"
+		},
+		"item33": {
+			"img": "img/catalog/icon_land-rover.svg",
+			"model": "land rover",
+			"quantity": "40"
+		},
+		"item34": {
+			"img": "img/catalog/icon_mini.svg",
+			"model": "mini",
+			"quantity": "16"
+		},
+		"item35": {
+			"img": "img/catalog/icon_seat.svg",
+			"model": "seat",
+			"quantity": "17"
+		},
+		"item36": {
+			"img": "img/catalog/icon_vw.svg",
+			"model": "vw",
+			"quantity": "67"
+		},
+		"item37": {
+			"img": "img/catalog/Icon_Chevrolet.svg",
+			"model": "Chevrolet",
+			"quantity": "23"
+		},
+		"item38": {
+			"img": "img/catalog/icon_hummer.svg",
+			"model": "hummer",
+			"quantity": "7"
+		},
+		"item39": {
+			"img": "img/catalog/icon_ldv.svg",
+			"model": "ldv",
+			"quantity": "16"
+		},
+		"item40": {
+			"img": "img/catalog/icon_mitsubishi.svg",
+			"model": "mitsubishi",
+			"quantity": "37"
+		},
+		"item41": {
+			"img": "img/catalog/icon_shkoda.svg",
+			"model": "shkoda",
+			"quantity": "24"
+		},
+		"item42": {
+			"img": "img/catalog/icon_chrisler.svg",
+			"model": "chrisler",
+			"quantity": "18"
+		},
+		"item43": {
+			"img": "img/catalog/icon_hyundai.svg",
+			"model": "hyundai",
+			"quantity": "37"
+		},
+		"item44": {
+			"img": "img/catalog/icon_lexus.svg",
+			"model": "lexus",
+			"quantity": "38"
+		},
+		"item45": {
+			"img": "img/catalog/icon_nissan.svg",
+			"model": "nissan",
+			"quantity": "40"
+		},
+		"item46": {
+			"img": "img/catalog/icon_ssang-yong.svg",
+			"model": "ssang yong",
+			"quantity": "13"
+		}
+	},
 	"contacts": {
 		"phone": "8 (952) 263 66 99",
 		"address": "Санкт-Петербург, шоссе Революции, д.68",
@@ -20,7 +252,7 @@
 		},
 		"item4": {
 			"text": "Контакты",
-			"link": "#"
+			"link": "contacts.html"
 		}
 	}
 }

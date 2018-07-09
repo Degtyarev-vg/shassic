@@ -1,0 +1,62 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer-contacts/footer-contacts';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer-contacts {
+  border: 1px solid #cccccc;
+  font-size: 0;
+  padding: 20px 0;
+
+  &__left, &__right {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    @media (max-width: 479px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__left {
+    padding: 0 30px 0 38px;
+    width: calc(100% - 197px);
+    @media (max-width: 1310px) {
+      padding: 0 20px;
+      width: calc(100% - 165px);
+    }
+  }
+  &__right {
+    width: 197px;
+    @media (max-width: 1310px) {
+      width: 165px;
+    }
+    @media (max-width: 479px) {
+      padding: 0 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__phone {
+    font-family: $proxima_nova_condensedSBd;
+    font-size: 24px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &__address, &__time, &__email {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 14px;
+  }
+
+  &__social-item {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 21px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

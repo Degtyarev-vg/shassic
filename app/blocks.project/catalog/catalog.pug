@@ -1,0 +1,12 @@
+mixin catalog()
+  +b.catalog&attributes(attributes)
+    h2 Каталог автозапчастей
+    +b.step Шаг 1 - Выберите марку автомобиля
+    ul
+      each item in catalog
+        li
+          a(href='#')
+            +e.img-container
+              img(src=item.img alt=item.model)
+            p !{item.model} <span>!{item.quantity}</span>
+    +b('a')(href='javascript:undefined').btn-more.__btn-more Показать еще

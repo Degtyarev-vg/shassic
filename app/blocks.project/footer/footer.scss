@@ -1,0 +1,121 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer/footer';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer {
+  background: url('../img/footer_bg.jpg') center no-repeat;
+  background-size: cover;
+  font-size: 0;
+  padding: 26px 0 28px;
+  @media (max-width: 1310px) {
+    padding: 25px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (max-width: 479px) {
+      justify-content: center;
+    }
+  }
+
+  &__container- {
+    &logo, &menu, &contacts {
+      flex-shrink: 1;
+    }
+    &logo {
+      width: 26%;
+      @media (max-width: 1310px) {
+        width: 200px;
+      }
+    }
+    &menu {
+      padding-left: 78px;
+      width: 30%;
+      @media (max-width: 1310px) {
+        padding: 0 30px 0 30px;
+        width: 250px;
+      }
+      @media (max-width: 992px) {
+        padding: 0 0 0 30px;
+        max-width: calc(100% - 200px);
+        width: auto;
+      }
+      @media (max-width: 479px) {
+        padding: 0;
+        margin-top: 30px;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    &contacts {
+      width: 44%;
+      @media (max-width: 1310px) {
+        width: calc(100% - 450px);
+      }
+      @media (max-width: 992px) {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #ebebeb;
+    margin-top: 20px;
+  }
+
+  nav {
+    li {
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    .active {
+      a {
+        color: $accentColor;
+        text-decoration: none;
+        &:before {
+          background-color: $accentColor;
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      font-family: $proxima_nova_condensedregular;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #fff;
+      padding-left: 15px;
+      position: relative;
+      transition: $transition;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 3px;
+        width: 3px;
+        background-color: #fff;
+        transition: $transition;
+      }
+      &:hover {
+        color: $accentColor;
+        text-decoration: none;
+        &:before {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
+}

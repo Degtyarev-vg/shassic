@@ -7,7 +7,7 @@
     },
     "item2" : {
       "text" : "Доставка и возврат",
-      "link" : "#"
+      "link" : "delivery.html"
     },
     "item3" : {
       "text" : "О компании",

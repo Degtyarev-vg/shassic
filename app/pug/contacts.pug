@@ -8,14 +8,18 @@ html(lang='ru')
 
   +page
 
-    +header(false)._index.__header
+    +header(false)._contacts.__header
       .grid
         +e.banner
-          h1 Красивое УТП,<br/>почему нужно тут заказать запчасти
+          h1 Контакты
 
     +b.content.__content
 
       .grid
-        //-
+        +breadcrumbs(['Главная', 'Контакты'])._offset
+
+      +section-contacts
 
     +footer(false).__footer
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCK-1NS6b7lW0QHulQHFN8qBSxaZRgi9Hc')

@@ -1,0 +1,10 @@
+// Для импорта в файл подключения: @import './app/blocks.project/map/map';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.map {
+  height: 371px;
+  width: 100%;
+}

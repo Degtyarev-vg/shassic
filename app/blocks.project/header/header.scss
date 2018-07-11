@@ -9,6 +9,28 @@
   &_index {
     background: url('../img/banner.jpg') center no-repeat;
     background-size: cover;
+    .header__banner {
+      padding: 104px 0 136px;
+      @media (max-width: 992px) {
+        padding: 50px 0;
+      }
+      h1 {
+        color: #013c76;
+      }
+    }
+  }
+  &_contacts {
+    background: url('../img/contacts_bg.jpg') center no-repeat;
+    background-size: cover;
+    .header__banner {
+      padding: 153px 0 106px;
+      @media (max-width: 992px) {
+        padding: 50px 0;
+      }
+      h1 {
+        color: #fff;
+      }
+    }
   }
 
   &__top {
@@ -114,16 +136,11 @@
 
   &__banner {
     text-align: center;
-    padding: 104px 0 136px;
-    @media (max-width: 992px) {
-      padding: 50px 0;
-    }
     h1 {
       font-family: $proxima_nova_condensedBdIt;
       font-size: 48px;
       line-height: 60px;
       font-weight: normal;
-      color: #013c76;
       padding-bottom: 20px;
       position: relative;
       @media (max-width: 992px) {

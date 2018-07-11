@@ -1,0 +1,105 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-contacts/section-contacts';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-contacts {
+  background-color: #fff;
+  font-size: 0;
+  padding: 50px 0;
+  @media (max-width: 1310px) {
+    padding: 25px 0;
+  }
+
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+    border-right: 1px solid #cccccc;
+    padding: 0 15px;
+    width: 33.3333333%;
+    @media (max-width: 1310px) {
+      border-right: 0;
+    }
+    @media (max-width: 992px) {
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    &:last-of-type {
+      border-right: 0;
+      padding-left: 30px;
+      @media (max-width: 1310px) {
+        padding-left: 15px;
+      }
+      @media (max-width: 992px) {
+        margin-top: 30px;
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        margin-top: 15px;
+      }
+      br {
+        display: none;
+        @media (max-width: 767px) {
+          display: block;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      padding-left: 110px;
+      @media (max-width: 1310px) {
+        padding-left: 15px;
+      }
+      @media (max-width: 767px) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__address,
+  &__time,
+  &__phone,
+  &__email {
+    font-family: $proxima_nova_condensedregular;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #040c10;
+  }
+  &__address, &__phone {
+    margin-bottom: 35px;
+    @media (max-width: 1310px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__social-item {
+    font-family: $proxima_nova_condensedregular;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #040c10;
+    margin: 0 0 28px 43px;
+    @media (max-width: 1310px) {
+      margin: 0 0 20px 20px;
+    }
+    @media (max-width: 992px) {
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+    @media (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__map {
+    margin-top: 60px;
+    @media (max-width: 992px) {
+      margin-top: 30px;
+    }
+  }
+}

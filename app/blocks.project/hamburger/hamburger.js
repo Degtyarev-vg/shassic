@@ -2,16 +2,6 @@
 
 $(function() {
 
-  $('.hamburger').click(function() {
-    $(this)
-      .find('.hamburger__btn')
-      .toggleClass('hamburger__btn_on');
-
-    $('.top-menu ul').slideToggle();
-
-    return false;
-  });
-
   function eventCheck(e) {
     let container = $('.top-menu ul');
 
@@ -27,7 +17,27 @@ $(function() {
     }
   }
 
-  document.addEventListener('touchstart', eventCheck, false);
-  document.addEventListener('click', eventCheck, false);
+  function regulationsForMq(mq) {
+    if (mq.matches) {
+      $('.hamburger').click(function() {
+        $(this)
+          .find('.hamburger__btn')
+          .toggleClass('hamburger__btn_on');
+
+        $('.top-menu ul').slideToggle();
+
+        return false;
+      });
+
+      document.addEventListener('touchstart', eventCheck, false);
+      document.addEventListener('click', eventCheck, false);
+    }
+  }
+
+  let mq = window.matchMedia('screen and (max-width: 992px)');
+
+  mq.addListener(regulationsForMq);
+
+  regulationsForMq(mq);
 
 });

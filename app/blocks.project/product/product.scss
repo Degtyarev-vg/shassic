@@ -1,0 +1,188 @@
+// Для импорта в файл подключения: @import './app/blocks.project/product/product';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.product {
+  background-color: #fff;
+  transition: $transition;
+  padding: 30px 17px;
+  text-align: center;
+  @media (max-width: 479px) {
+    padding: 20px 10px;
+  }
+  &:hover {
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, .2);
+  }
+
+  &__img-container {
+    display: inline-block;
+    font-size: 0;
+    padding: 0 34px;
+    position: relative;
+    text-align: center;
+    max-width: 378px;
+    width: 100%;
+  }
+  &__img {
+    display: inline-block;
+    position: relative;
+    // height: 233px;
+    // width: 100px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+      height: 0;
+    }
+    img {
+      display: none !important;
+    }
+  }
+
+  &__prev, &__next {
+    display: inline-block;
+    height: 36px;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    cursor: pointer;
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2236%22%20width%3D%2216%22%3E%3Cpath%20d%3D%22M12.16%2017.996L.002%2033.8%202.159%2036%2016%2017.996%202.156%200%200%202.2z%22%20fill%3D%22%23e1e1e1%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: contain;
+    &:hover {
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2236%22%20width%3D%2216%22%3E%3Cpath%20d%3D%22M12.16%2017.996L.002%2033.8%202.159%2036%2016%2017.996%202.156%200%200%202.2z%22%20fill%3D%22%23013c76%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+  &__prev {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &__next {
+    right: 0;
+  }
+
+  &__quantity-images {
+    background-color: rgba(255, 255, 255, .6);
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #363d40;
+    position: absolute;
+    bottom: 8px;
+    right: 41px;
+    height: 20px;
+    width: 20px;
+    z-index: 1;
+    text-align: center;
+    &:before, &:after {
+      content: '';
+      background-color: rgba(255, 255, 255, .6);
+      position: absolute;
+      right: -3px;
+      bottom: -3px;
+    }
+    &:before {
+      height: 20px;
+      width: 2px;
+    }
+    &:after {
+      height: 2px;
+      width: 20px;
+    }
+  }
+
+  &__content {
+    margin-top: 33px;
+  }
+
+  &__name {
+    font-family: $proxima_nova_condensedbold;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #0054a6;
+    transition: $transition;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__model, &__features {
+    font-size: 18px;
+    line-height: 1.2;
+    color: #363d40;
+    span {
+      font-family: $proxima_nova_condensedbold;
+    }
+  }
+  &__model {
+    margin: 10px 0;
+  }
+
+  &__quantity {
+    display: inline-block;
+    font-family: $proxima_nova_condensedbold;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fe9b00;
+    margin: 10px 0 5px;
+    padding-left: 25px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 15px;
+      width: 18px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2215%22%20width%3D%2218%22%3E%3Cpath%20d%3D%22M.208%208.257a.646.718%200%200%201%200-1.056l.97-1.044a.681.757%200%200%201%20.969%200l.069.067%203.807%204.432a.35.389%200%200%200%20.485%200L15.785.225h.07a.68.755%200%200%201%20.968%200l.97%201.055a.636.707%200%200%201%200%201.044L6.715%2014.778a.686.762%200%200%201-.969%200L.345%208.479z%22%20data-name%3D%22icon_galka%22%20fill%3D%22%23fe9b00%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%221.054%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: 1.2;
+    color: #363d40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      flex-shrink: 1;
+      font-family: $proxima_nova_condensedbold;
+      font-size: 32px;
+      padding-left: 7px;
+    }
+  }
+
+  &__buttons {
+    font-size: 0;
+    margin-top: 15px;
+  }
+
+  &__button-basket {
+    padding-right: 54px;
+    margin-right: 22px;
+    &:before {
+      right: 16px;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  &__button-buy {
+    padding-right: 32px;
+    &:before {
+      right: 12px;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+    }
+  }
+
+}

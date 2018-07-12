@@ -1,0 +1,26 @@
+mixin section-popular(header)
+  +b.section-popular&attributes(attributes)
+    .grid
+      h2=header
+      +e.list
+        each item in popularProducts
+          +e.item
+            +b.product.__products
+              +e.images
+                +e.img-container
+                  +e.img-slider
+                    each imgItem in item.images
+                      +e.img
+                        +e('img')(src=imgItem alt='')
+                  +e.navigation
+                  +e('span').quantity-images
+              +e.content
+                +e('a')(href='#').name !{item.name}
+                +e('p').model !{item.model}
+                +e('p').features Особенности: <span>!{item.features}</span>
+                +e('span').quantity В наличии: <span>!{item.quantity}</span> шт.
+                +e('p').price Цена: <span>!{item.price} руб.</span>
+              +e.buttons
+                +b('a')(href='#').button._full._basket.__button-basket В корзину
+                +b('a')(href='#').button._border._icon-right.__button-buy Купить в 1 клик
+      +e.navigation

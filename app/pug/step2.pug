@@ -1,0 +1,35 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Запчасти марки Ford | ШАССИК - разборка иномарок';
+
+  +page
+
+    +header(false).__header
+
+    +b.content.__content
+
+      .grid
+        +breadcrumbs(['Главная', 'Запчасти марки Ford'])._offset
+
+      +b('section').section-step
+        .grid
+          h1 <img src='img/icon_ford.svg' alt='Ford'/> Запчасти марки Ford. Купить в СПб
+          +b.step.__step Шаг 2. Выберите модель
+          +b.models
+            +e.inner
+              each item in models
+                ul
+                  each model in item
+                    li
+                      a(href='#') !{model}
+            +b('a')(href='javascript:undefined').btn-more.__btn-more Показать еще
+
+      +section-popular('Часто покупают')
+
+      +section-text
+
+    +footer(false).__footer

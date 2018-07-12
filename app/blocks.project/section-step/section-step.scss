@@ -1,0 +1,35 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-step/section-step';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-step {
+  background-color: #fff;
+  padding-bottom: 25px;
+  text-align: center;
+
+  h1 {
+    font-family: $proxima_nova_condensedbold;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #0054a6;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  &__step {
+    margin: 15px 0 40px;
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+  }
+
+}

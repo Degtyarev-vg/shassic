@@ -1,0 +1,37 @@
+{
+  "models" : {
+
+    "different" : [
+      "C-MAX 2003-2011",
+      "Escape 2001-2006",
+      "Explorer V 2010-2018",
+      "Fiesta 2001-2007",
+      "Fiesta 2008-2018"
+    ],
+    "focus" : [
+      "Focus I 1998-2004",
+      "Focus II 2005-2008",
+      "Focus II 2008-2011",
+      "Focus III 2011-2018"
+    ],
+    "fusion" : [
+      "Fusion 2002-2012",
+      "Kuga 2012-2018",
+      "Kuga 2008-2012",
+      "Maverick 1993-1998"
+    ],
+    "mondeo" : [
+      "Mondeo II 1996-2000",
+      "Mondeo III 2000-2007",
+      "Mondeo IV 2007-2014",
+      "Mondeo IV 2007-2014"
+    ],
+    "transit" : [
+      "Ranger 2006-2012",
+      "Transit 2006-2012",
+      "Transit Connect 2002-2018",
+      "Transit [FA] 2000-2006"
+    ]
+
+  }
+}

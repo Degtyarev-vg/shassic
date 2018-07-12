@@ -231,6 +231,39 @@
 			"quantity": "13"
 		}
 	},
+	"models": {
+		"different": [
+			"C-MAX 2003-2011",
+			"Escape 2001-2006",
+			"Explorer V 2010-2018",
+			"Fiesta 2001-2007",
+			"Fiesta 2008-2018"
+		],
+		"focus": [
+			"Focus I 1998-2004",
+			"Focus II 2005-2008",
+			"Focus II 2008-2011",
+			"Focus III 2011-2018"
+		],
+		"fusion": [
+			"Fusion 2002-2012",
+			"Kuga 2012-2018",
+			"Kuga 2008-2012",
+			"Maverick 1993-1998"
+		],
+		"mondeo": [
+			"Mondeo II 1996-2000",
+			"Mondeo III 2000-2007",
+			"Mondeo IV 2007-2014",
+			"Mondeo IV 2007-2014"
+		],
+		"transit": [
+			"Ranger 2006-2012",
+			"Transit 2006-2012",
+			"Transit Connect 2002-2018",
+			"Transit [FA] 2000-2006"
+		]
+	},
 	"basketTable": {
 		"thead": [
 			"Фото",
@@ -289,6 +322,51 @@
 				"quantity": "1",
 				"total": "3 500"
 			}
+		}
+	},
+	"popularProducts": {
+		"item1": {
+			"images": [
+				"img/products/1.jpg",
+				"img/products/2.jpg"
+			],
+			"name": "Насос топливный электрический",
+			"model": "Ford Focus III 2011-2018",
+			"features": "без датчика уровня топлива",
+			"quantity": "1",
+			"price": "3 500"
+		},
+		"item2": {
+			"images": [
+				"img/products/2.jpg",
+				"img/products/3.jpg"
+			],
+			"name": "Патрубок интеркулера",
+			"model": "Ford Mondeo IV 2007-2014",
+			"features": "2.5T/также на Volvo S80 2006",
+			"quantity": "4",
+			"price": "500"
+		},
+		"item3": {
+			"images": [
+				"img/products/3.jpg"
+			],
+			"name": "Патрубок радиатора",
+			"model": "Ford Kuda 2012-2018",
+			"features": "верхний",
+			"quantity": "1",
+			"price": "1 500"
+		},
+		"item4": {
+			"images": [
+				"img/products/2.jpg",
+				"img/products/3.jpg"
+			],
+			"name": "Какое-то название",
+			"model": "модель автомобиля",
+			"features": "какая-то особенность",
+			"quantity": "10",
+			"price": "5 000"
 		}
 	},
 	"contacts": {

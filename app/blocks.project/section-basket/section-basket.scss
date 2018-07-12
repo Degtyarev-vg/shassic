@@ -8,6 +8,11 @@
   padding: 25px 0;
   text-align: center;
 
+  &__section-text {
+    text-align: left;
+    padding: 0;
+  }
+
   h4 {
     display: inline-block;
     font-family: $proxima_nova_condensedbold;
@@ -16,14 +21,6 @@
     text-align: center;
     padding: 15px 0 25px;
     max-width: 800px;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 1.3;
-    color: #303030;
-    margin-top: 17px;
-    text-align: left;
   }
 
   &__responsive-table {
@@ -113,5 +110,23 @@
       padding-left: 0;
       width: 100%;
     }
+  }
+
+  &__buttons {
+    text-align: left;
+    margin-top: 19px;
+    a {
+      margin-bottom: 10px;
+      &:first-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__personal {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #474747;
   }
 }

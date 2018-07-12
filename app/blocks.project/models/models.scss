@@ -1,0 +1,96 @@
+// Для импорта в файл подключения: @import './app/blocks.project/models/models';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.models {
+
+  &__inner {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    margin: 0 -15px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    @media (max-width: 400px) {
+      text-align: center;
+      max-height: 200px;
+      overflow: hidden;
+      position: relative;
+      &:before {
+        content: '';
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7));
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 90px;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+    &_open {
+      @media (max-width: 400px) {
+        max-height: 100%;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  ul {
+    flex-shrink: 1;
+    border-right: 1px solid #ccc;
+    padding: 0 15px 0 40px;
+    width: 20%;
+    @media (max-width: 1310px) {
+      padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+      border-right: 0;
+      width: 33.3333333%;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      width: 50%;
+    }
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+    &:first-of-type {
+      padding-left: 15px;
+    }
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    a {
+      display: inline-block;
+      font-family: $proxima_nova_condensedSBd;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #0054a6;
+      transition: $transition;
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+
+  &__btn-more {
+    width: 100%;
+    display: none;
+    @media (max-width: 400px) {
+      display: block;
+    }
+  }
+}

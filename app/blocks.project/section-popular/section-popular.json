@@ -1,0 +1,49 @@
+{
+  "popularProducts" : {
+
+    "item1" : {
+      "images" : [
+        "img/products/1.jpg",
+        "img/products/2.jpg"
+      ],
+      "name" : "Насос топливный электрический",
+      "model" : "Ford Focus III 2011-2018",
+      "features" : "без датчика уровня топлива",
+      "quantity" : "1",
+      "price" : "3 500"
+    },
+    "item2" : {
+      "images" : [
+        "img/products/2.jpg",
+        "img/products/3.jpg"
+      ],
+      "name" : "Патрубок интеркулера",
+      "model" : "Ford Mondeo IV 2007-2014",
+      "features" : "2.5T/также на Volvo S80 2006",
+      "quantity" : "4",
+      "price" : "500"
+    },
+    "item3" : {
+      "images" : [
+        "img/products/3.jpg"
+      ],
+      "name" : "Патрубок радиатора",
+      "model" : "Ford Kuda 2012-2018",
+      "features" : "верхний",
+      "quantity" : "1",
+      "price" : "1 500"
+    },
+    "item4" : {
+      "images" : [
+        "img/products/2.jpg",
+        "img/products/3.jpg"
+      ],
+      "name" : "Какое-то название",
+      "model" : "модель автомобиля",
+      "features" : "какая-то особенность",
+      "quantity" : "10",
+      "price" : "5 000"
+    }
+
+  }
+}

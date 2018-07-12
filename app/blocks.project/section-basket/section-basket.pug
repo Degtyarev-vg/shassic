@@ -1,0 +1,103 @@
+mixin section-basket()
+  +b('section').section-basket&attributes(attributes)
+    .grid
+      h2 Корзина
+      +b('table').responsive-table.__responsive-table
+        thead
+          tr
+            each item in basketTable.thead
+              th !{item}
+        tbody
+          each item in basketTable.tbody
+            tr
+              td(data-label='Фото')
+                +e('span').inner
+                  img(src=item.image alt=item.product)
+              td(data-label='Артикул')
+                +e('span').inner
+                  +e('span').text
+                    a(href='#') !{item.articul}
+              td(data-label='Марка автомобиля')
+                +e('span').inner
+                  +e('span').text !{item.model}
+              td(data-label='Товар')
+                +e('span').inner
+                  +e('span').text
+                    a(href='#') <b>!{item.product}</b>
+              td(data-label='Цена(руб.)')
+                +e('span').inner
+                  +e('span').text <b>!{item.price}</b>
+              td(data-label='Количество')
+                +e('span').inner
+                  input(type='text' value=item.quantity name='quantity' maxlength='3' autocomplete='off')
+              td(data-label='Всего(руб.)')
+                +e('span').inner
+                  +e('span').text <b>!{item.total}</b>
+              td(data-label='Удалить')
+                +e('span').inner
+                  +e('a')(href='javascript:undefined').delete
+          tr
+            td(colspan='8') 2 товара на сумму :
+              +e('span').total 5 800 руб.
+      +e.align-right
+        +b('a')(href='order.html').button._full Оформить заказ
+
+      p Доставка товаров производится по всем регионам РФ и является бесплатной до транспортной компании.
+      p Доставка по городу платная и ее стоимость зависит от района покупателя.
+      p Оплата товара осуществляется либо наличными либо по безналичному расчету на расчетный счет Сбербанка.
+
+
+mixin section-basket2()
+  +b('section').section-basket&attributes(attributes)
+    .grid
+      h2 Оформление заказа
+      +b('table').responsive-table._padding.__responsive-table
+        thead
+          tr
+            - let i = 0;
+            each item in basketOrder.thead
+              th(class='' + (i === 4 ? 'responsive-table__center' : '')) !{item}
+              - i++;
+        tbody
+          each item in basketOrder.tbody
+            tr
+              td(data-label='Артикул')
+                +e('span').inner
+                  +e('span').text
+                    a(href='#') !{item.articul}
+              td(data-label='Марка автомобиля')
+                +e('span').inner
+                  +e('span').text !{item.model}
+              td(data-label='Товар')
+                +e('span').inner
+                  +e('span').text
+                    a(href='#') <b>!{item.product}</b>
+              td(data-label='Цена(руб.)')
+                +e('span').inner
+                  +e('span').text <b>!{item.price}</b>
+              td(data-label='Количество')
+                +e('span').inner
+                  +e('span').text.__center !{item.quantity}
+              td(data-label='Всего(руб.)')
+                +e('span').inner
+                  +e('span').text <b>!{item.total}</b>
+          tr
+            td(colspan='6') 2 товара на сумму :
+              +e('span').total 5 800 руб.
+
+      h4 Для завершения оформления заказа, пожалуйста, заполните форму контактной информации, чтобы мы могли связаться с Вами и обсудить условия доставки товара.
+
+      +e('form')(action='#' method='post' autocomplete='off').form
+        +e.form-left
+          label(for='name') Имя
+          input(type='text' name='name')#name
+          label(for='email') E-mail
+          input(type='text' name='email')#email
+          label(for='phone') Телефон
+          input(type='text' name='phone')#phone
+        +e.form-right
+          label(for='address') Адрес доставки
+          input(type='text' name='address')#address
+          label(for='text') Комментарии
+          textarea(name='text')#text
+

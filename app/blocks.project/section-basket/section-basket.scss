@@ -1,0 +1,117 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-basket/section-basket';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-basket {
+  padding: 25px 0;
+  text-align: center;
+
+  h4 {
+    display: inline-block;
+    font-family: $proxima_nova_condensedbold;
+    font-size: 20px;
+    color: #303030;
+    text-align: center;
+    padding: 15px 0 25px;
+    max-width: 800px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #303030;
+    margin-top: 17px;
+    text-align: left;
+  }
+
+  &__responsive-table {
+    margin: 25px 0 11px;
+    @media (max-width: 992px) {
+      margin: 15px 0 10px;
+    }
+  }
+
+  &__align-right {
+    text-align: right;
+  }
+
+  &__form {
+    background-color: #daf3fc;
+    font-size: 0;
+    padding: 25px 30px;
+    text-align: left;
+    @media (max-width: 992px) {
+      padding: 15px;
+    }
+  }
+
+  &__form-left, &__form-right {
+    display: inline-block;
+    vertical-align: top;
+    @media (max-width: 992px) {
+      display: block;
+    }
+    label {
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      color: #363d40;
+      margin-bottom: 10px;
+    }
+    input, textarea {
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #cccccc;
+      display: block;
+      font-size: 16px;
+      color: #363d40;
+      padding: 12px 10px;
+      width: 100%;
+      &:focus {
+        border-color: #66afe9;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+      }
+      &::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+      &::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+      &:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+      &:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+      &:focus::-webkit-input-placeholder {opacity: .4; transition: opacity 0.3s ease;}
+      &:focus::-moz-placeholder          {opacity: .4; transition: opacity 0.3s ease;}
+      &:focus:-moz-placeholder           {opacity: .4; transition: opacity 0.3s ease;}
+      &:focus:-ms-input-placeholder      {opacity: .4; transition: opacity 0.3s ease;}
+    }
+    input {
+      margin-bottom: 25px;
+      @media (max-width: 992px) {
+        margin-bottom: 15px;
+      }
+      &:nth-of-type(3) {
+        margin-bottom: 0;
+        @media (max-width: 992px) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    textarea {
+      resize: vertical;
+      height: 139px;
+    }
+  }
+  &__form-left {
+    width: 380px;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &__form-right {
+    padding-left: 49px;
+    width: calc(100% - 380px);
+    @media (max-width: 992px) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+}

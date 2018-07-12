@@ -1,0 +1,20 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Корзина | ШАССИК - разборка иномарок';
+
+  +page
+
+    +header(false).__header
+
+    +b.content.__content
+
+      .grid
+        +breadcrumbs(['Главная', 'Корзина'])._offset
+
+      +section-basket
+
+    +footer(false).__footer

@@ -1,0 +1,76 @@
+// Для импорта в файл подключения: @import './app/blocks.project/button/button';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.button {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-family: $proxima_nova_condensedbold;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $transition;
+  position: relative;
+  padding: 15px 13px 11px;
+
+  &_full {
+    background-color: $accentColor;
+    color: #fff;
+    &:hover {
+      background-color: #d38100;
+    }
+  }
+
+  &_border {
+    border: 1px solid #fe9b00;
+    color: #fe9b00;
+    padding-left: 13px;
+    &:hover {
+      background-color: $accentColor;
+      border: 1px solid $accentColor;
+      color: #feffff;
+    }
+  }
+
+  &_icon-right {
+    padding-right: 36px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      transition: $transition;
+      height: 16px;
+      width: 10px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2210%22%3E%3Cpath%20d%3D%22M5.7%208L0%2013.806%202.15%2016%2010%208%202.15%200%200%202.192z%22%20data-name%3D%22icon_strelka-v-knopke_orang%20(svg)%22%20fill%3D%22%23fe9b00%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      &:before {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2210%22%3E%3Cpath%20d%3D%22M5.7%208L0%2013.806%202.15%2016%2010%208%202.15%200%200%202.192z%22%20data-name%3D%22icon_strelka-v-knopke_orang%20(svg)%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &_basket {
+    padding-right: 82px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      transition: $transition;
+      height: 20px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2220%22%20width%3D%2222%22%3E%3Cpath%20d%3D%22M.816%201.63h2.33l3.322%2012.038a.83.829%200%200%200%20.79.6h10.214a.821.821%200%200%200%20.75-.489l3.712-8.56a.82.819%200%200%200-.07-.773.8.8%200%200%200-.68-.367H9.899a.815.815%200%200%200%200%201.63h10.044l-3.01%206.928H7.868L4.547.6a.82.819%200%200%200-.79-.6H.816a.816.815%200%200%200%200%201.63zM6.488%2020a1.849%201.848%200%201%200-1.85-1.848A1.844%201.843%200%200%200%206.487%2020zm11.524%200h.14a1.847%201.846%200%200%200%201.261-.639%201.9%201.9%200%200%200%20.45-1.345A1.846%201.845%200%201%200%2018.013%2020z%22%20data-name%3D%22icon_korzina%20(svg)%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+
+}

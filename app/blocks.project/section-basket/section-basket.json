@@ -1,0 +1,73 @@
+{
+  "basketTable" : {
+
+    "thead" : [
+      "Фото",
+      "Артикул",
+      "Марка автомобиля",
+      "Товар",
+      "Цена(руб.)",
+      "Количество",
+      "Всего(руб.)",
+      "Удалить"
+    ],
+
+    "tbody" : {
+      "tr1" : {
+        "image" : "img/basket/1.jpg",
+        "articul" : "123456",
+        "model" : "Nissan Juke (F15) 2011-2017",
+        "product" : "Диск колесный железо",
+        "price" : "2 300",
+        "quantity" : "1",
+        "total" : "2 300"
+      },
+      "tr2" : {
+        "image" : "img/basket/no_image.jpg",
+        "articul" : "123456",
+        "model" : "Nissan Juke (F15) 2011-2017",
+        "product" : "Диск колесный железо",
+        "price" : "3 500",
+        "quantity" : "1",
+        "total" : "3 500"
+      }
+    }
+
+
+  },
+
+  "basketOrder" : {
+
+    "thead" : [
+      "Артикул",
+      "Марка автомобиля",
+      "Товар",
+      "Цена(руб.)",
+      "Количество",
+      "Всего(руб.)"
+    ],
+
+    "tbody" : {
+      "tr1" : {
+        "articul" : "123456",
+        "model" : "Nissan Juke (F15) 2011-2017",
+        "product" : "Диск колесный железо",
+        "price" : "2 300",
+        "quantity" : "1",
+        "total" : "2 300"
+      },
+      "tr2" : {
+        "articul" : "123456",
+        "model" : "Nissan Juke (F15) 2011-2017",
+        "product" : "Диск колесный железо",
+        "price" : "3 500",
+        "quantity" : "1",
+        "total" : "3 500"
+      }
+    }
+
+
+  }
+
+}
+

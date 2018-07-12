@@ -15,11 +15,11 @@
     <!-- build:remove-->
     <link href="css/header.min.css" rel="stylesheet">
     <!-- endbuild-->
-    <title>Контакты | ШАССИК - разборка иномарок</title>
+    <title>Оформление заказа | ШАССИК - разборка иномарок</title>
     <meta name="description" content="">
     <meta name="keywords" content=""> </head>
   <body class="page">
-    <header class="header header_contacts page__header">
+    <header class="header page__header">
       <div class="header__top">
         <div class="grid">
           <div class="header__top-container">
@@ -84,11 +84,6 @@
           </form>
         </div>
       </div>
-      <div class="grid">
-        <div class="header__banner">
-          <h1>Контакты</h1>
-        </div>
-      </div>
     </header>
     <div class="content page__content">
       <div class="grid">
@@ -96,37 +91,136 @@
           <li>
             <a href="#">Главная</a>
           </li>
-          <li>Контакты</li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
+          <li>Оформление заказа</li>
         </ul>
       </div>
-      <div class="section-contacts">
+      <section class="section-basket">
         <div class="grid">
-          <div class="row">
-            <div class="section-contacts__col">
-              <div class="contacts-item contacts-item_address section-contacts__address">
-                <span></span>Санкт-Петербург, шоссе Революции, д.68 </div>
-              <br/>
-              <div class="contacts-item contacts-item_time section-contacts__time">
-                <span></span> Часы работы с 10:00 до 19:00 </div>
+          <h2>Оформление заказа</h2>
+          <table class="responsive-table responsive-table_padding section-basket__responsive-table">
+            <thead>
+              <tr>
+                <th>Артикул</th>
+                <th>Марка автомобиля</th>
+                <th>Товар</th>
+                <th>Цена(руб.)</th>
+                <th class="responsive-table__center">Количество</th>
+                <th>Всего(руб.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Артикул">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <a href="#">123456</a>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Марка автомобиля">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">Nissan Juke (F15) 2011-2017</span>
+                  </span>
+                </td>
+                <td data-label="Товар">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <a href="#">
+                        <b>Диск колесный железо</b>
+                      </a>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Цена(руб.)">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <b>2 300</b>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Количество">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text responsive-table__center">1</span>
+                  </span>
+                </td>
+                <td data-label="Всего(руб.)">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <b>2 300</b>
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Артикул">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <a href="#">123456</a>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Марка автомобиля">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">Nissan Juke (F15) 2011-2017</span>
+                  </span>
+                </td>
+                <td data-label="Товар">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <a href="#">
+                        <b>Диск колесный железо</b>
+                      </a>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Цена(руб.)">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <b>3 500</b>
+                    </span>
+                  </span>
+                </td>
+                <td data-label="Количество">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text responsive-table__center">1</span>
+                  </span>
+                </td>
+                <td data-label="Всего(руб.)">
+                  <span class="responsive-table__inner">
+                    <span class="responsive-table__text">
+                      <b>3 500</b>
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6">2 товара на сумму :
+                  <span class="responsive-table__total">5 800 руб.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Для завершения оформления заказа, пожалуйста, заполните форму контактной информации, чтобы мы могли связаться с Вами и обсудить условия доставки товара.</h4>
+          <form class="section-basket__form" action="#" method="post" autocomplete="off">
+            <div class="section-basket__form-left">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
+              <label for="email">E-mail</label>
+              <input type="text" name="email" id="email" />
+              <label for="phone">Телефон</label>
+              <input type="text" name="phone" id="phone" /> </div>
+            <div class="section-basket__form-right">
+              <label for="address">Адрес доставки</label>
+              <input type="text" name="address" id="address" />
+              <label for="text">Комментарии</label>
+              <textarea name="text" id="text"></textarea>
             </div>
-            <div class="section-contacts__col">
-              <a class="contacts-item contacts-item_phone section-contacts__phone" href="tel:89522636699">
-                <span></span>8 (952) 263 66 99</a>
-              <br/>
-              <a class="contacts-item contacts-item_email section-contacts__email" href="mailto:info@shassik.ru">
-                <span></span>info@shassik.ru</a>
-            </div>
-            <div class="section-contacts__col">
-              <a class="social-item social-item_vk section-contacts__social-item" href="https://vk.com" target="_blank">Группа в контакте</a>
-              <br/>
-              <a class="social-item social-item_whatsapp section-contacts__social-item" href="https://api.whatsapp.com/send?phone=79522636699">WhatsApp</a>
-              <br/>
-              <a class="social-item social-item_viber section-contacts__social-item" href="viber://chat?number=79522636699">Viber</a>
-            </div>
-          </div>
-          <div class="map section-contacts__map" id="map"> </div>
+          </form>
         </div>
-      </div>
+      </section>
     </div>
     <footer class="footer page__footer">
       <div class="grid">
@@ -182,31 +276,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK-1NS6b7lW0QHulQHFN8qBSxaZRgi9Hc"></script>
-    <script>
-      // initMap() - функция инициализации карты
-      function initMap()
-      {
-        // Координаты центра на карте. Широта: 59.960541, Долгота: 30.445356
-        const centerLatLng = new google.maps.LatLng(59.960541, 30.445356);
-        // Обязательные опции с которыми будет проинициализированна карта
-        const mapOptions = {
-          center: centerLatLng, // Координаты центра мы берем из переменной centerLatLng
-          zoom: 15 // Зум по умолчанию. Возможные значения от 0 до 21
-        };
-        // Создаем карту внутри элемента #map
-        const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        // Добавляем маркер
-        const marker = new google.maps.Marker(
-        {
-          position: centerLatLng, // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
-          map: map, // Карта на которую нужно добавить маркер
-          title: 'ШАССИК - разборка иномарок' // (Необязательно) Текст выводимый в момент наведения на маркер
-        });
-      }
-      // Ждем полной загрузки страницы, после этого запускаем initMap()
-      google.maps.event.addDomListener(window, 'load', initMap);
-    </script>
     <link href="css/style.min.css" rel="stylesheet" />
     <script src="js/libs.min.js"></script>
     <script src="js/blocks.min.js"></script>

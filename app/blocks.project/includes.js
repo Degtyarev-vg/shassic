@@ -6,3 +6,5 @@
 //= include models/models.js
 //= include section-popular/section-popular.js
 //= include product/product.js
+//= include section-card/section-card.js
+//= include tabs/tabs.js

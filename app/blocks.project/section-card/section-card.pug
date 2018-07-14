@@ -1,0 +1,31 @@
+mixin section-card()
+  +b('section').section-card&attributes(attributes)
+    .grid
+      h1 Диск колесный железо для Ford Mondeo IV 2007-2014
+      +e.card
+        +e.left
+          +e.img-container
+            +e.img-slider
+              +e.img
+                +e('img')(src='img/products/2.jpg' alt='')
+              +e.img
+                +e('img')(src='img/products/3.jpg' alt='')
+              +e.img
+                +e('img')(src='img/products/1.jpg' alt='')
+            +e.navigation
+            +e('span').quantity-images
+        +e.right
+          +e('p').model Ford Mondeo IV 2007-2014
+          +e('p').features Особенности: <span>R-18 /без резины</span>
+          +e('p').original-number Оригинальный номер:: <span>1234567</span>
+          +e('span').quantity В наличии: <span>2</span> шт.
+          br
+          +e.price-block
+            +e('p').price Цена: <span>3 500 руб.</span>
+            +e('a')(href='#').bargain Торговаться
+          br
+          +b('a')(href='#').button._full._basket.__button-basket В корзину
+          br
+          +b('a')(href='#').button._border._icon-right.__button-buy Купить в 1 клик
+
+      +tabs

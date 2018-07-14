@@ -17,7 +17,7 @@ $(function() {
     nextArrow: '<span class=\'section-popular__next\'></span>',
     responsive: [
       {
-        breakpoint: 1310,
+        breakpoint: 1311,
         settings: {
           slidesToShow: 2,
         }

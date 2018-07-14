@@ -1,0 +1,68 @@
+// Для импорта в файл подключения: @import './app/blocks.project/tabs/tabs';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.tabs {
+
+  .section-text {
+    color: #363d40;
+    padding: 15px 0 0 0;
+    p:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__nav {
+    font-size: 0;
+    margin: 0 -5px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+    &_active {
+      .tabs__link {
+        border-color: #0054a6;
+      }
+    }
+  }
+
+  &__link {
+    border: 1px solid transparent;
+    display: inline-block;
+    font-family: $proxima_nova_condensedSBd;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #0054a6;
+    text-decoration: none;
+    transition: $transition;
+    padding: 11px 33px;
+    &:hover {
+      background-color: #b6e7fa;
+      border-color: transparent;
+    }
+    @media (max-width: 768px) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__tab-content {
+    display: none;
+    &:first-of-type {
+      display: block;
+    }
+  }
+
+}

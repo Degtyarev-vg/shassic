@@ -1,40 +1,78 @@
-// Для импорта в файл подключения: @import './app/blocks.project/product/product';
+// Для импорта в файл подключения: @import './app/blocks.project/section-card/section-card';
 
 @import '../../scss/vars';     // файл с переменными
 @import '../../scss/png-sprite';    // файл с png-спрайтами
 
 
-.product {
-  background-color: #fff;
-  transition: $transition;
-  padding: 30px 17px;
-  text-align: center;
-  @media (max-width: 479px) {
-    padding: 20px 10px;
+.section-card {
+  padding: 0 0 35px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #363d40;
+
+  h1 {
+    font-family: $proxima_nova_condensedbold;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #0054a6;
+    @media (max-width: 992px) {
+      font-size: 30px;
+    }
   }
-  &:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+
+  &__card {
+    font-size: 0;
+    padding: 33px 0 48px;
+  }
+
+  &__left, &__right {
+    display: inline-block;
+    vertical-align: top;
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+  &__left {
+    text-align: center;
+    width: 436px;
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+  &__right {
+    font-size: 18px;
+    padding-left: 33px;
+    width: calc(100% - 436px);
+    @media (max-width: 992px) {
+      text-align: center;
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   &__img-container {
     display: inline-block;
     font-size: 0;
-    padding: 0 34px;
+    padding: 0 22px;
     position: relative;
     text-align: center;
-    max-width: 378px;
+    max-width: 459px;
     width: 100%;
   }
   &__img {
     display: inline-block;
     position: relative;
-    // height: 233px;
-    // width: 100px;
-    &:before {
-      content: '';
-      display: block;
-      padding-top: 75%;
-      height: 0;
+    height: 297px;
+    width: 100%;
+    @media (max-width: 992px) {
+      height: auto;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 75%;
+        height: 0;
+      }
     }
     img {
       display: none !important;
@@ -72,8 +110,8 @@
     line-height: 20px;
     color: #363d40;
     position: absolute;
-    bottom: 8px;
-    right: 41px;
+    bottom: 7px;
+    right: 29px;
     height: 20px;
     width: 20px;
     z-index: 1;
@@ -95,42 +133,25 @@
     }
   }
 
-  &__content {
-    margin-top: 33px;
-  }
-
-  &__name {
-    font-family: $proxima_nova_condensedbold;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #0054a6;
-    transition: $transition;
-    &:hover {
-      color: $accentColor;
-    }
-  }
-
-  &__model, &__features {
-    font-size: 18px;
-    line-height: 1.2;
-    color: #363d40;
+  &__features, &__original-number {
     span {
       font-family: $proxima_nova_condensedbold;
     }
   }
-  &__model {
+  &__features {
     margin: 10px 0;
   }
 
   &__quantity {
     display: inline-block;
     font-family: $proxima_nova_condensedbold;
-    font-size: 18px;
-    line-height: 1.2;
     color: #fe9b00;
-    margin: 10px 0 5px;
-    padding-left: 25px;
+    margin: 15px 0 5px;
+    padding-left: 28px;
     position: relative;
+    @media (max-width: 992px) {
+      margin: 15px 0;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -143,13 +164,23 @@
     }
   }
 
+  &__price-block {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 23px;
+    @media (max-width: 479px) {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
   &__price {
-    font-size: 18px;
-    line-height: 1.2;
-    color: #363d40;
+    flex-shrink: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    @media (max-width: 479px) {
+      display: inline-flex;
+    }
     span {
       flex-shrink: 1;
       font-family: $proxima_nova_condensedbold;
@@ -158,25 +189,43 @@
     }
   }
 
-  &__buttons {
-    font-size: 0;
-    margin-top: 15px;
+  &__bargain {
+    border: 1px solid #0054a6;
+    display: inline-block;
+    font-family: $proxima_nova_condensedbold;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $transition;
+    color: #0054a6;
+    padding: 15px 14px 11px;
+    margin-left: 23px;
+    &:hover {
+      border-color: $accentColor;
+      background-color: $accentColor;
+      color: #fff;
+    }
+    @media (max-width: 479px) {
+      display: block;
+      margin: 15px 0 0 0;
+      width: 100%;
+    }
   }
 
   &__button-basket {
+    padding-left: 37px;
     padding-right: 54px;
-    margin-right: 22px;
+    margin-bottom: 15px;
     &:before {
-      right: 16px;
+      right: 21px;
     }
     @media (max-width: 479px) {
       width: 100%;
-      margin-right: 0;
-      margin-bottom: 15px;
     }
   }
   &__button-buy {
-    padding-right: 32px;
+    padding-right: 33px;
     &:before {
       right: 12px;
     }

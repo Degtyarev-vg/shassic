@@ -369,6 +369,20 @@
 			"price": "5 000"
 		}
 	},
+	"tabs": {
+		"nav": [
+			"Описание",
+			"Оплата",
+			"Доставка",
+			"Гарантии"
+		],
+		"content": [
+			"<p>Диск колесный железо для Ford Mondeo IV 2007-2014 в продаже</p>",
+			"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga ipsa labore magninat?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><br/><h3>Heading h3</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, officiis?</p>",
+			"<h2>Heading h2</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><ul><li>Number one</li><li>Number two</li><li>Number three</li></ul>",
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloribus eaque fugit harum illum magnam maxime modi odio reiciendis vero! Aperiam dignissimos ducimus hic nostrum provident quod saepe soluta voluptate."
+		]
+	},
 	"contacts": {
 		"phone": "8 (952) 263 66 99",
 		"address": "Санкт-Петербург, шоссе Революции, д.68",

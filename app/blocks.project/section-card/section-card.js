@@ -2,8 +2,8 @@
 
 $(function() {
 
-  $('.product').each(function() {
-    $(this).find('.product__img').each(function() {
+  $('.section-card').each(function() {
+    $(this).find('.section-card__img').each(function() {
       let img = $(this).find('img').attr('src');
 
       $(this).css({
@@ -13,21 +13,21 @@ $(function() {
     });
   });
 
-  $('.product__img-slider').each(function() {
+  $('.section-card__img-slider').each(function() {
     $(this).slick({
       infinite: true,
       fade: false,
       autoplay: false,
       speed: 300,
       slidesToShow: 1,
-      swipeToSlide: false,
-      swipe: false,
+      swipeToSlide: true,
+      swipe: true,
       dots: false,
       adaptiveHeight: false,
       arrows: true,
-      appendArrows: $(this).parent().find('.product__navigation'),
-      prevArrow: '<span class=\'product__prev\'></span>',
-      nextArrow: '<span class=\'product__next\'></span>',
+      appendArrows: $(this).parent().find('.section-card__navigation'),
+      prevArrow: '<span class=\'section-card__prev\'></span>',
+      nextArrow: '<span class=\'section-card__next\'></span>',
     });
 
     let slideQuantity = $(this).slick('getSlick').slideCount;
@@ -35,7 +35,7 @@ $(function() {
     if(slideQuantity > 1){
       $(this)
         .parent()
-        .find('.product__quantity-images')
+        .find('.section-card__quantity-images')
         .css({'display' : 'inline-block'})
         .html(slideQuantity);
     }

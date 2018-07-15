@@ -21,6 +21,6 @@ mixin section-popular(header)
                 +e('span').quantity В наличии: <span>!{item.quantity}</span> шт.
                 +e('p').price Цена: <span>!{item.price} руб.</span>
               +e.buttons
-                +b('a')(href='#').button._full._basket.__button-basket В корзину
+                +b('a')(href='#popup-add-basket').button._full._basket.__button-basket.popup-with-zoom-anim В корзину
                 +b('a')(href='#').button._border._icon-right.__button-buy Купить в 1 клик
       +e.navigation

@@ -1,0 +1,7 @@
+mixin popup-add-basket()
+  +b.popup-add-basket.popup.zoom-anim-dialog.mfp-hide#popup-add-basket&attributes(attributes)
+    +e('h4').title Товар добавлен в корзину
+    +e('a')(href='#').name Диск колесный железо для Ford Mondeo IV 2007-2014
+    +e('p').price Цена <span>3 500 руб.</span>
+    +b('a')(href='basket.html').button._full._basket.__button-basket Оформить заказ
+    +b('a')(href='#').button._border._icon-right.__button-buy.close-popup Продолжить покупки

@@ -1,0 +1,31 @@
+mixin catalog-menu()
+  +b('nav').catalog-menu&attributes(attributes)
+    +e('a')(href='javascript:undefined').open-menu Выберите деталь
+    +e.content
+      ul
+        - let i = 0;
+        each item in catalogMenu
+          li(class='' + ((i === 2) ? 'active' : '') class='' + (item.submenu ? 'dropdown' : ''))
+            a(href='javascript:undefined') !{item.name} <span>!{item.quantity}</span>
+            if item.submenu
+              ul
+                - let j = 0;
+                each subItem in item.submenu
+                  li(class='' + ((j === 2) ? 'active' : ''))
+                    a(href='#') !{subItem}
+                  - j++;
+          - i++;
+      +e('a')(href='step2.html').back Вернуться назад к выбору моделей
+
+mixin catalog-menu2()
+  +b('nav').catalog-menu&attributes(attributes)
+    +e('a')(href='javascript:undefined').open-menu Выберите диск/покрышку
+    +e.content
+      ul
+        li !{catalogMenu.item6.name} <span>9</span>
+        - let i = 0;
+        each item in catalogMenu.item6.submenu
+          li(class='' + ((i === 1) ? 'active' : ''))
+            a(href='#') !{item} <span>15</span>
+          - i++;
+      +e('a')(href='catalog.html').back Вернуться назад к каталогу

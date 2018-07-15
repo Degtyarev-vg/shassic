@@ -1,0 +1,63 @@
+// Для импорта в файл подключения: @import './app/blocks.project/popup-add-basket/popup-add-basket';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.popup {
+  background-color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #363d40;
+  text-align: center;
+  padding: 35px 15px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.popup-add-basket {
+
+  &__title {
+    font-family: $proxima_nova_condensedbold;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__name {
+    display: inline-block;
+    font-family: $proxima_nova_condensedbold;
+    color: #0054a6;
+    transition: $transition;
+    margin: 10px 0;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-family: $proxima_nova_condensedbold;
+      font-size: 32px;
+      line-height: 1;
+      padding-left: 7px;
+    }
+  }
+
+  &__button-basket, &__button-buy {
+    margin-top: 20px;
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+  &__button-basket {
+    margin-right: 30px;
+    @media (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+}

@@ -8,3 +8,7 @@
 //= include product/product.js
 //= include section-card/section-card.js
 //= include tabs/tabs.js
+//= include catalog-menu/catalog-menu.js
+//= include custom-select/custom-select.js
+//= include view/view.js
+//= include popup-add-basket/popup-add-basket.js

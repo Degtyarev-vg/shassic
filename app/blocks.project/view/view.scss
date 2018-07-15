@@ -1,0 +1,50 @@
+// Для импорта в файл подключения: @import './app/blocks.project/view/view';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.view {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    background-color: #fff;
+    border: 1px solid transparent;
+    position: relative;
+    transition: $transition;
+    height: 33px;
+    width: 33px;
+    &:hover {
+      border-color: #ccc;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 23px;
+    }
+    &_tile {
+      margin-left: 11px;
+      &:before {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h10v10H0zm13%200h10v10H13zM0%2013h10v10H0zm13%200h10v10H13z%22%20data-name%3D%22icon_plitka-off%20(svg)%22%20fill%3D%22%23ccc%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+        background-size: contain;
+        width: 23px;
+      }
+    }
+    &_list {
+      margin-left: 9px;
+      &:before {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2224%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h5v5H0zm0%209h5v5H0zm0%209h5v5H0zM8%200h16v5H8zm0%209h16v5H8zm0%209h16v5H8z%22%20data-name%3D%22icon_spisok-off%20(svg)%22%20fill%3D%22%23ccc%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+        background-size: contain;
+        width: 24px;
+      }
+    }
+    &_active {
+      border-color: #ccc;
+    }
+  }
+
+}

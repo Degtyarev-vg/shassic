@@ -1,0 +1,96 @@
+mixin section-catalog()
+  +b('section').section-catalog&attributes(attributes)
+    .grid
+      h1 Запчасти для Ford Mondeo IV 2007-2014. Разборка Ford
+      +b.step.__step Шаг 3. Выберите категорию
+      +e.content
+        +e.left
+          +catalog-menu
+        +e.right
+          +e.controls
+            +e.controls-left
+              +e('p').goods Товаров <span>82</span>
+              +e.sort Сортировать по
+                +b.custom-select.__custom-select
+                  +e('a')(href='javascript:undefined').drop-button Дате добавления
+                  +e('ul').drop-list
+                    +e('li').drop-item._selected
+                      +e('a')(href='date').drop-link Дате добавления
+                    +e('li').drop-item
+                      +e('a')(href='expensive').drop-link Сначала дорогие
+                    +e('li').drop-item
+                      +e('a')(href='cheap').drop-link Сначала недорогие
+                  +e('input')(type='hidden' name='sort' value='date').drop-hidden-input
+            +e.controls-right
+              +view
+          +e.list
+            each item in popularProducts
+              +e.card
+                +b.product.__product
+                  +e.images
+                    +e.img-container
+                      +e.img-slider
+                        each imgItem in item.images
+                          +e.img
+                            +e('img')(src=imgItem alt='')
+                      +e.navigation
+                      +e('span').quantity-images
+                  +e.content
+                    +e('a')(href='#').name !{item.name}
+                    +e('p').model !{item.model}
+                    +e('p').features Особенности: <span>!{item.features}</span>
+                    +e('span').quantity В наличии: <span>!{item.quantity}</span> шт.
+                    +e('p').price Цена: <span>!{item.price} руб.</span>
+                  +e.buttons
+                    +b('a')(href='#popup-add-basket').button._full._basket.__button-basket.popup-with-zoom-anim В корзину
+                    +b('a')(href='#').button._border._icon-right.__button-buy Купить в 1 клик
+          +b('a')(href='#').btn-more.__btn-more Показать еще
+
+
+mixin section-catalog2()
+  +b('section').section-catalog&attributes(attributes)
+    .grid
+      h1 Колесные диски, покрышки для Ford Mondeo IV 2007-2014.
+      +b.step.__step Шаг 4. Выберите категорию
+      +e.content
+        +e.left
+          +catalog-menu2._step4
+        +e.right
+          +e.controls
+            +e.controls-left
+              +e('p').goods Товаров <span>82</span>
+              +e.sort Сортировать по
+                +b.custom-select.__custom-select
+                  +e('a')(href='javascript:undefined').drop-button Дате добавления
+                  +e('ul').drop-list
+                    +e('li').drop-item._selected
+                      +e('a')(href='date').drop-link Дате добавления
+                    +e('li').drop-item
+                      +e('a')(href='expensive').drop-link Сначала дорогие
+                    +e('li').drop-item
+                      +e('a')(href='cheap').drop-link Сначала недорогие
+                  +e('input')(type='hidden' name='sort' value='date').drop-hidden-input
+            +e.controls-right
+              +view
+          +e.list
+            each item in popularProducts
+              +e.card
+                +b.product.__product
+                  +e.images
+                    +e.img-container
+                      +e.img-slider
+                        each imgItem in item.images
+                          +e.img
+                            +e('img')(src=imgItem alt='')
+                      +e.navigation
+                      +e('span').quantity-images
+                  +e.content
+                    +e('a')(href='#').name !{item.name}
+                    +e('p').model !{item.model}
+                    +e('p').features Особенности: <span>!{item.features}</span>
+                    +e('span').quantity В наличии: <span>!{item.quantity}</span> шт.
+                    +e('p').price Цена: <span>!{item.price} руб.</span>
+                  +e.buttons
+                    +b('a')(href='#popup-add-basket').button._full._basket.__button-basket.popup-with-zoom-anim В корзину
+                    +b('a')(href='#').button._border._icon-right.__button-buy Купить в 1 клик
+          +b('a')(href='#').btn-more.__btn-more Показать еще

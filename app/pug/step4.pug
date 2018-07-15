@@ -1,0 +1,24 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Выбор категории | ШАССИК - разборка иномарок';
+
+  +page
+
+    +header(false).__header
+
+    +b.content.__content
+
+      .grid
+        +breadcrumbs(['Главная', 'Запчасти марки Ford', 'Mondeo IV 2007-2014', 'Колесные диски, покрышки', 'Диск колесный железо 24'])._offset
+
+      +section-catalog2
+
+      +section-text
+
+    +footer(false).__footer
+
+    +popup-add-basket
